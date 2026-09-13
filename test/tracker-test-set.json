@@ -211,6 +211,182 @@
           "tracker": false
         }
       ]
+    },
+    {
+      "name": "Removed child domains remain covered by their parents",
+      "topUrl": "https://catalog-audit.example.test/",
+      "requests": [
+        {
+          "url": "https://cdn.segment.com/collect",
+          "type": "xmlhttprequest",
+          "tracker": true,
+          "category": "Analytics"
+        },
+        {
+          "url": "https://nested.cdn.segment.com/collect",
+          "type": "xmlhttprequest",
+          "tracker": true,
+          "category": "Analytics"
+        },
+        {
+          "url": "https://cdn.segment.com.example.test/collect",
+          "type": "xmlhttprequest",
+          "tracker": false
+        },
+        {
+          "url": "https://ssl.google-analytics.com/collect",
+          "type": "xmlhttprequest",
+          "tracker": true,
+          "category": "Analytics"
+        },
+        {
+          "url": "https://nested.ssl.google-analytics.com/collect",
+          "type": "xmlhttprequest",
+          "tracker": true,
+          "category": "Analytics"
+        },
+        {
+          "url": "https://ssl.google-analytics.com.example.test/collect",
+          "type": "xmlhttprequest",
+          "tracker": false
+        },
+        {
+          "url": "https://www.google-analytics.com/collect",
+          "type": "xmlhttprequest",
+          "tracker": true,
+          "category": "Analytics"
+        },
+        {
+          "url": "https://nested.www.google-analytics.com/collect",
+          "type": "xmlhttprequest",
+          "tracker": true,
+          "category": "Analytics"
+        },
+        {
+          "url": "https://www.google-analytics.com.example.test/collect",
+          "type": "xmlhttprequest",
+          "tracker": false
+        },
+        {
+          "url": "https://googleads.g.doubleclick.net/collect",
+          "type": "xmlhttprequest",
+          "tracker": true,
+          "category": "Ad tracking"
+        },
+        {
+          "url": "https://nested.googleads.g.doubleclick.net/collect",
+          "type": "xmlhttprequest",
+          "tracker": true,
+          "category": "Ad tracking"
+        },
+        {
+          "url": "https://googleads.g.doubleclick.net.example.test/collect",
+          "type": "xmlhttprequest",
+          "tracker": false
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/collect",
+          "type": "xmlhttprequest",
+          "tracker": true,
+          "category": "Ad tracking"
+        },
+        {
+          "url": "https://nested.pagead2.googlesyndication.com/collect",
+          "type": "xmlhttprequest",
+          "tracker": true,
+          "category": "Ad tracking"
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com.example.test/collect",
+          "type": "xmlhttprequest",
+          "tracker": false
+        },
+        {
+          "url": "https://securepubads.g.doubleclick.net/collect",
+          "type": "xmlhttprequest",
+          "tracker": true,
+          "category": "Ad tracking"
+        },
+        {
+          "url": "https://nested.securepubads.g.doubleclick.net/collect",
+          "type": "xmlhttprequest",
+          "tracker": true,
+          "category": "Ad tracking"
+        },
+        {
+          "url": "https://securepubads.g.doubleclick.net.example.test/collect",
+          "type": "xmlhttprequest",
+          "tracker": false
+        },
+        {
+          "url": "https://connect.facebook.net/collect",
+          "type": "xmlhttprequest",
+          "tracker": true,
+          "category": "Social pixel"
+        },
+        {
+          "url": "https://nested.connect.facebook.net/collect",
+          "type": "xmlhttprequest",
+          "tracker": true,
+          "category": "Social pixel"
+        },
+        {
+          "url": "https://connect.facebook.net.example.test/collect",
+          "type": "xmlhttprequest",
+          "tracker": false
+        },
+        {
+          "url": "https://px.ads.linkedin.com/collect",
+          "type": "xmlhttprequest",
+          "tracker": true,
+          "category": "Social pixel"
+        },
+        {
+          "url": "https://nested.px.ads.linkedin.com/collect",
+          "type": "xmlhttprequest",
+          "tracker": true,
+          "category": "Social pixel"
+        },
+        {
+          "url": "https://px.ads.linkedin.com.example.test/collect",
+          "type": "xmlhttprequest",
+          "tracker": false
+        },
+        {
+          "url": "https://script.hotjar.com/collect",
+          "type": "xmlhttprequest",
+          "tracker": true,
+          "category": "Session replay"
+        },
+        {
+          "url": "https://nested.script.hotjar.com/collect",
+          "type": "xmlhttprequest",
+          "tracker": true,
+          "category": "Session replay"
+        },
+        {
+          "url": "https://script.hotjar.com.example.test/collect",
+          "type": "xmlhttprequest",
+          "tracker": false
+        },
+        {
+          "url": "https://static.hotjar.com/collect",
+          "type": "xmlhttprequest",
+          "tracker": true,
+          "category": "Session replay"
+        },
+        {
+          "url": "https://nested.static.hotjar.com/collect",
+          "type": "xmlhttprequest",
+          "tracker": true,
+          "category": "Session replay"
+        },
+        {
+          "url": "https://static.hotjar.com.example.test/collect",
+          "type": "xmlhttprequest",
+          "tracker": false
+        }
+      ]
     }
   ],
   "landingUrls": [

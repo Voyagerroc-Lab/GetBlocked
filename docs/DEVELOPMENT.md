@@ -40,6 +40,7 @@ There are no runtime npm dependencies. The npm scripts use Node.js built-ins.
 npm run check
 npm run generate:rules
 npm run test:evidence
+npm run test:tooling
 npm run test:decoy
 npm run test:browser
 node --check background.js
@@ -54,6 +55,10 @@ node --check scripts/browser-test.mjs
 ```
 
 `npm run check` is the complete non-browser validation used by CI. The optional browser harness remains separate because compatible extension support is not available in every headless environment.
+
+`npm run test:tooling` tests the catalog generator and evidence CLI, including deliberate missed-block and false-positive fixtures in temporary directories. To evaluate another fixture without editing the tracked test set, run `npm run test:evidence -- /path/to/fixture.json`. The fixture format is unchanged. Evidence mismatches exit nonzero while successful runs still print category coverage.
+
+When intentionally changing generated rules, review and stage `rules/rules.json` and `shared/config.js` before running the full check: `check:generated` compares the regenerated working files with the Git index.
 
 ## Browser Test
 

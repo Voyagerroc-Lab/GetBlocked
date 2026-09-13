@@ -37,6 +37,10 @@ Example tracker entry:
 
 Keep the domain narrow. Avoid broad platform domains, login providers, payment processors, captcha services, and core CDNs.
 
+Chrome's [`requestDomains` matching](https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest#property-RuleCondition-requestDomains) includes all subdomains. If `example.com` is already listed, adding `cdn.example.com` does not add blocking coverage. The generator rejects unexplained parent/child overlaps and names both entries before writing generated files.
+
+If a child needs to retain distinct metadata, add a nonempty `redundancyReason` to that child, for example `"Preserves the Social pixel category; the parent is Ad tracking."`. This retains the entry in generated rules and category mappings; it is not a blocking exception. The generator reports retained overlaps and rejects empty reasons or reasons whose parent is no longer in the catalog. See the [catalog audit](CATALOG_AUDIT.md) for the current decisions.
+
 The catalog is also Decoy Mode's hard scope boundary. When the experimental mode is on, page-level `fetch`, XHR, and beacon calls to this domain become eligible for identifier replacement instead of the normal DNR block. Confirm that the entry is genuinely a tracker endpoint and not a payment, login, captcha, or other transactional service.
 
 ## 2. Add One Test Fixture
@@ -80,6 +84,8 @@ npm run test:evidence
 ```
 
 Confirm the new fixture is blocked and category coverage still looks correct.
+
+Requests with `tracker: true` must be blocked; requests with `tracker: false` must remain unblocked. Either mismatch fails the command and prints the fixture, request URL, page URL, and expected result. Add negative fixtures for nearby legitimate hosts where useful. This evaluator approximates DNR matching; it does not replace browser verification of registrable-domain/third-party behavior.
 
 Also run the full suite so catalog scoping and Decoy Mode safety checks remain covered:
 
