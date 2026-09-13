@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { findCatalogOverlaps } from "./catalog-overlaps.mjs";
 
 const rootDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const catalogPath = path.join(rootDir, "shared", "tracker-catalog.json");
@@ -175,6 +176,17 @@ function buildConfig({ domains, categories, trackingParams }) {
 const catalog = readJson(catalogPath);
 const trackingParams = readJson(trackingParamsPath);
 assertValidCatalog(catalog);
+const overlaps = findCatalogOverlaps(catalog.trackers);
+for (const { domain, parent, reason } of overlaps) {
+  if (reason) {
+    console.log(`Retained ${domain} (covered by ${parent}): ${reason}`);
+  } else {
+    console.error(`Redundant tracker domain ${domain}: already covered by ${parent}. Remove the child or add a redundancyReason explaining its distinct metadata.`);
+  }
+}
+if (overlaps.some((overlap) => !overlap.reason)) {
+  throw new Error("Resolve redundant catalog domains before generating rules.");
+}
 
 const trackers = catalog.trackers.map((tracker) => ({
   ...tracker,

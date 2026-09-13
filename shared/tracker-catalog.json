@@ -15,16 +15,10 @@
       "notes": "Customer data and analytics collection"
     },
     {
-      "domain": "cdn.segment.com",
-      "category": "Analytics",
-      "label": "Segment CDN",
-      "notes": "Segment analytics library"
-    },
-    {
       "domain": "google-analytics.com",
       "category": "Analytics",
       "label": "Google Analytics",
-      "notes": "Analytics collection"
+      "notes": "Analytics collection. Includes Google Analytics SSL (ssl.google-analytics.com): Analytics collection endpoint. Includes Google Analytics WWW (www.google-analytics.com): Analytics script and collection endpoint."
     },
     {
       "domain": "googletagmanager.com",
@@ -78,25 +72,14 @@
       "domain": "segment.com",
       "category": "Analytics",
       "label": "Segment",
-      "notes": "Customer data and analytics collection"
-    },
-    {
-      "domain": "ssl.google-analytics.com",
-      "category": "Analytics",
-      "label": "Google Analytics SSL",
-      "notes": "Analytics collection endpoint"
+      "notes": "Customer data and analytics collection. Includes Segment CDN (cdn.segment.com): Segment analytics library."
     },
     {
       "domain": "stats.g.doubleclick.net",
       "category": "Analytics",
       "label": "Google Analytics DoubleClick",
-      "notes": "Google Analytics advertising/measurement endpoint"
-    },
-    {
-      "domain": "www.google-analytics.com",
-      "category": "Analytics",
-      "label": "Google Analytics WWW",
-      "notes": "Analytics script and collection endpoint"
+      "notes": "Google Analytics advertising/measurement endpoint",
+      "redundancyReason": "Retains the Analytics category for this endpoint; doubleclick.net is categorized as Ad tracking."
     },
     {
       "domain": "adnxs.com",
@@ -150,7 +133,7 @@
       "domain": "doubleclick.net",
       "category": "Ad tracking",
       "label": "DoubleClick",
-      "notes": "Ad serving and measurement"
+      "notes": "Ad serving and measurement. Includes Google Ads DoubleClick (googleads.g.doubleclick.net): Ad serving and tracking. Includes Google Publisher Ads (securepubads.g.doubleclick.net): Ad serving."
     },
     {
       "domain": "googleadservices.com",
@@ -159,16 +142,10 @@
       "notes": "Ad conversion tracking"
     },
     {
-      "domain": "googleads.g.doubleclick.net",
-      "category": "Ad tracking",
-      "label": "Google Ads DoubleClick",
-      "notes": "Ad serving and tracking"
-    },
-    {
       "domain": "googlesyndication.com",
       "category": "Ad tracking",
       "label": "Google Syndication",
-      "notes": "Ad serving"
+      "notes": "Ad serving. Includes Google Pagead (pagead2.googlesyndication.com): Ad serving."
     },
     {
       "domain": "googletagservices.com",
@@ -195,12 +172,6 @@
       "notes": "Recommendation advertising"
     },
     {
-      "domain": "pagead2.googlesyndication.com",
-      "category": "Ad tracking",
-      "label": "Google Pagead",
-      "notes": "Ad serving"
-    },
-    {
       "domain": "pubmatic.com",
       "category": "Ad tracking",
       "label": "PubMatic",
@@ -225,12 +196,6 @@
       "notes": "Audience measurement"
     },
     {
-      "domain": "securepubads.g.doubleclick.net",
-      "category": "Ad tracking",
-      "label": "Google Publisher Ads",
-      "notes": "Ad serving"
-    },
-    {
       "domain": "sharethrough.com",
       "category": "Ad tracking",
       "label": "Sharethrough",
@@ -252,7 +217,7 @@
       "domain": "ads.linkedin.com",
       "category": "Social pixel",
       "label": "LinkedIn Ads",
-      "notes": "Social advertising pixel"
+      "notes": "Social advertising pixel. Includes LinkedIn Insight (px.ads.linkedin.com): Social conversion pixel."
     },
     {
       "domain": "ads.tiktok.com",
@@ -279,12 +244,6 @@
       "notes": "Social analytics pixel"
     },
     {
-      "domain": "connect.facebook.net",
-      "category": "Social pixel",
-      "label": "Facebook Pixel",
-      "notes": "Social advertising pixel"
-    },
-    {
       "domain": "ct.pinterest.com",
       "category": "Social pixel",
       "label": "Pinterest Conversion Tag",
@@ -294,13 +253,7 @@
       "domain": "facebook.net",
       "category": "Social pixel",
       "label": "Facebook",
-      "notes": "Social advertising and measurement"
-    },
-    {
-      "domain": "px.ads.linkedin.com",
-      "category": "Social pixel",
-      "label": "LinkedIn Insight",
-      "notes": "Social conversion pixel"
+      "notes": "Social advertising and measurement. Includes Facebook Pixel (connect.facebook.net): Social advertising pixel."
     },
     {
       "domain": "sc-static.net",
@@ -318,7 +271,8 @@
       "domain": "static.ads-twitter.com",
       "category": "Social pixel",
       "label": "Twitter Ads Static",
-      "notes": "Social advertising script"
+      "notes": "Social advertising script",
+      "redundancyReason": "Retains the Social pixel category for this endpoint; ads-twitter.com is categorized as Ad tracking."
     },
     {
       "domain": "tr.snapchat.com",
@@ -360,7 +314,7 @@
       "domain": "hotjar.com",
       "category": "Session replay",
       "label": "Hotjar",
-      "notes": "Session replay and heatmaps"
+      "notes": "Session replay and heatmaps. Includes Hotjar Script (script.hotjar.com): Session replay script. Includes Hotjar Static (static.hotjar.com): Session replay script."
     },
     {
       "domain": "hotjar.io",
@@ -387,22 +341,10 @@
       "notes": "Session replay and heatmaps"
     },
     {
-      "domain": "script.hotjar.com",
-      "category": "Session replay",
-      "label": "Hotjar Script",
-      "notes": "Session replay script"
-    },
-    {
       "domain": "smartlook.com",
       "category": "Session replay",
       "label": "Smartlook",
       "notes": "Session replay"
-    },
-    {
-      "domain": "static.hotjar.com",
-      "category": "Session replay",
-      "label": "Hotjar Static",
-      "notes": "Session replay script"
     },
     {
       "domain": "awin1.com",

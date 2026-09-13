@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 
 const rootDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const rulesPath = path.join(rootDir, "rules", "rules.json");
-const testSetPath = path.join(rootDir, "test", "tracker-test-set.json");
+const testSetPath = process.argv[2] || path.join(rootDir, "test", "tracker-test-set.json");
 
 const rules = JSON.parse(fs.readFileSync(rulesPath, "utf8"));
 const testSet = JSON.parse(fs.readFileSync(testSetPath, "utf8"));
@@ -94,7 +94,9 @@ function trackingParamsRemovedByRules(rawUrl) {
 }
 
 const requests = testSet.pages.flatMap((page) => {
-  return page.requests.map((request) => ({ ...request, topUrl: page.topUrl }));
+  return page.requests.map((request, index) => ({
+    ...request, topUrl: page.topUrl, fixture: `${page.name || page.topUrl} request ${index + 1}`
+  }));
 });
 
 const knownTrackerRequests = requests.filter((request) => request.tracker);
@@ -103,6 +105,9 @@ const blockedKnownTrackers = knownTrackerRequests.filter((request) => {
 });
 const missedKnownTrackers = knownTrackerRequests.filter((request) => {
   return !isBlockedByRules(request, request.topUrl);
+});
+const falsePositives = requests.filter((request) => {
+  return request.tracker === false && isBlockedByRules(request, request.topUrl);
 });
 const before = knownTrackerRequests.length;
 const after = before - blockedKnownTrackers.length;
@@ -148,10 +153,13 @@ for (const item of categorySummary) {
   console.log(`- ${item.category}: ${item.blocked}/${item.total}`);
 }
 
-if (missedKnownTrackers.length > 0) {
-  console.log("");
-  console.log("Known tracker fixture requests not blocked:");
-  for (const request of missedKnownTrackers) {
-    console.log(`- ${request.url}`);
-  }
+for (const request of [...missedKnownTrackers, ...falsePositives]) {
+  const expected = request.tracker ? "blocked" : "unblocked";
+  const actual = request.tracker ? "unblocked" : "blocked";
+  console.error(`FAIL: ${request.fixture}: ${request.url} (page: ${request.topUrl}); expected ${expected}, got ${actual}`);
+}
+if (missedKnownTrackers.length || falsePositives.length) {
+  process.exitCode = 1;
+} else {
+  console.log(`PASS: all ${requests.length} request fixtures match their expected blocking result.`);
 }
