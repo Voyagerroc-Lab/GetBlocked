@@ -1,7 +1,7 @@
 name: Broken website report
 description: Report a site that may break when GetBlocked! is enabled.
 title: "[Broken site] "
-labels: ["broken-site", "needs reproduction"]
+labels: ["bug"]
 body:
   - type: input
     id: url

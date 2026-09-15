@@ -1,7 +1,7 @@
 name: Feature request
 description: Suggest a local-only, privacy-safe feature.
 title: "[Feature] "
-labels: ["enhancement", "PR welcome"]
+labels: ["enhancement"]
 body:
   - type: textarea
     id: summary

@@ -9,7 +9,7 @@ These issue ideas are designed to become small, focused pull requests. Copy any 
 ### 1. Add one analytics tracker fixture
 
 - Difficulty: Easy
-- Labels: `good first issue`, `help wanted`, `PR welcome`, `tracker-domain`
+- Labels: `good first issue`, `help wanted`, `enhancement`
 - Goal: Add one narrow analytics tracker domain and one test fixture.
 - Files to edit: `shared/tracker-catalog.json`, `test/tracker-test-set.json`
 - Commands to run: `npm run generate:rules`, `npm run test:evidence`
@@ -18,7 +18,7 @@ These issue ideas are designed to become small, focused pull requests. Copy any 
 ### 2. Add one ad retargeting tracker fixture
 
 - Difficulty: Easy
-- Labels: `good first issue`, `help wanted`, `PR welcome`, `tracker-domain`
+- Labels: `good first issue`, `help wanted`, `enhancement`
 - Goal: Add a narrowly scoped ad or retargeting endpoint.
 - Files to edit: `shared/tracker-catalog.json`, `test/tracker-test-set.json`
 - Commands to run: `npm run generate:rules`, `npm run test:evidence`
@@ -27,7 +27,7 @@ These issue ideas are designed to become small, focused pull requests. Copy any 
 ### 3. Add one social pixel tracker fixture
 
 - Difficulty: Easy
-- Labels: `good first issue`, `help wanted`, `PR welcome`, `tracker-domain`
+- Labels: `good first issue`, `help wanted`, `enhancement`
 - Goal: Add one social media pixel endpoint.
 - Files to edit: `shared/tracker-catalog.json`, `test/tracker-test-set.json`
 - Commands to run: `npm run generate:rules`, `npm run test:evidence`
@@ -36,7 +36,7 @@ These issue ideas are designed to become small, focused pull requests. Copy any 
 ### 4. Add one session replay tracker fixture
 
 - Difficulty: Easy
-- Labels: `good first issue`, `help wanted`, `PR welcome`, `tracker-domain`
+- Labels: `good first issue`, `help wanted`, `enhancement`
 - Goal: Add one session replay or heatmap endpoint.
 - Files to edit: `shared/tracker-catalog.json`, `test/tracker-test-set.json`
 - Commands to run: `npm run generate:rules`, `npm run test:evidence`
@@ -45,7 +45,7 @@ These issue ideas are designed to become small, focused pull requests. Copy any 
 ### 5. Add one affiliate attribution tracker fixture
 
 - Difficulty: Easy
-- Labels: `good first issue`, `help wanted`, `PR welcome`, `tracker-domain`
+- Labels: `good first issue`, `help wanted`, `enhancement`
 - Goal: Add one affiliate or attribution endpoint.
 - Files to edit: `shared/tracker-catalog.json`, `test/tracker-test-set.json`
 - Commands to run: `npm run generate:rules`, `npm run test:evidence`
@@ -54,7 +54,7 @@ These issue ideas are designed to become small, focused pull requests. Copy any 
 ### 6. Add one email marketing tracker fixture
 
 - Difficulty: Easy
-- Labels: `good first issue`, `help wanted`, `PR welcome`, `tracker-domain`
+- Labels: `good first issue`, `help wanted`, `enhancement`
 - Goal: Add one email marketing or marketing automation endpoint.
 - Files to edit: `shared/tracker-catalog.json`, `test/tracker-test-set.json`
 - Commands to run: `npm run generate:rules`, `npm run test:evidence`
@@ -63,7 +63,7 @@ These issue ideas are designed to become small, focused pull requests. Copy any 
 ### 7. Add one tracking URL parameter
 
 - Difficulty: Easy
-- Labels: `good first issue`, `help wanted`, `PR welcome`, `tracker-domain`
+- Labels: `good first issue`, `help wanted`, `enhancement`
 - Goal: Add one common tracking URL parameter to the cleaner.
 - Files to edit: `shared/tracking-params.json`, `test/tracker-test-set.json`
 - Commands to run: `npm run generate:rules`, `npm run test:evidence`
@@ -72,7 +72,7 @@ These issue ideas are designed to become small, focused pull requests. Copy any 
 ### 8. Add notes to existing tracker entries
 
 - Difficulty: Easy
-- Labels: `good first issue`, `help wanted`, `PR welcome`, `tracker-domain`, `documentation`
+- Labels: `good first issue`, `help wanted`, `enhancement`, `documentation`
 - Goal: Improve labels/notes for five existing catalog entries.
 - Files to edit: `shared/tracker-catalog.json`
 - Commands to run: `npm run generate:rules`, `npm run test:evidence`
@@ -80,10 +80,28 @@ These issue ideas are designed to become small, focused pull requests. Copy any 
 
 ## Documentation Improvement Issues
 
-### 9. Add glossary terms
+### 9. Add screenshots to the README
 
 - Difficulty: Easy
-- Labels: `good first issue`, `help wanted`, `PR welcome`, `documentation`
+- Labels: `good first issue`, `help wanted`, `documentation`
+- Goal: Add local screenshots of the popup and manual test flow.
+- Files to edit: `README.md`, optional image files
+- Commands to run: None required
+- Acceptance criteria: Screenshots do not include private browsing data.
+
+### 10. Improve the broken-site guide
+
+- Difficulty: Easy
+- Labels: `good first issue`, `help wanted`, `documentation`, `bug`
+- Goal: Add clearer examples of good broken-site reports.
+- Files to edit: `docs/BROKEN_SITES.md`
+- Commands to run: None required
+- Acceptance criteria: Guide remains beginner-friendly and privacy-safe.
+
+### 11. Add glossary terms
+
+- Difficulty: Easy
+- Labels: `good first issue`, `help wanted`, `documentation`
 - Goal: Explain DNR, third-party requests, pixels, and URL parameters.
 - Files to edit: `README.md` or a new docs file
 - Commands to run: None required
@@ -92,7 +110,7 @@ These issue ideas are designed to become small, focused pull requests. Copy any 
 ### 10. Improve local install docs for new Chrome users
 
 - Difficulty: Easy
-- Labels: `good first issue`, `help wanted`, `PR welcome`, `documentation`
+- Labels: `good first issue`, `help wanted`, `documentation`
 - Goal: Make unpacked extension install steps clearer.
 - Files to edit: `README.md`, `docs/DEVELOPMENT.md`
 - Commands to run: None required
@@ -103,7 +121,7 @@ These issue ideas are designed to become small, focused pull requests. Copy any 
 ### 11. Improve empty category state copy
 
 - Difficulty: Easy
-- Labels: `good first issue`, `help wanted`, `PR welcome`, `UI`
+- Labels: `good first issue`, `help wanted`, `ux`
 - Goal: Make the no-categories state clearer without fear-based language.
 - Files to edit: `popup/popup.html`, `popup/popup.js`, `popup/popup.css`
 - Commands to run: `node --check popup/popup.js`
@@ -112,7 +130,7 @@ These issue ideas are designed to become small, focused pull requests. Copy any 
 ### 12. Polish popup spacing on narrow widths
 
 - Difficulty: Easy
-- Labels: `good first issue`, `help wanted`, `PR welcome`, `UI`
+- Labels: `good first issue`, `help wanted`, `ux`
 - Goal: Improve spacing and wrapping in the popup.
 - Files to edit: `popup/popup.css`
 - Commands to run: None required
@@ -121,7 +139,7 @@ These issue ideas are designed to become small, focused pull requests. Copy any 
 ### 13. Add a local-only visual indicator variant
 
 - Difficulty: Easy
-- Labels: `good first issue`, `help wanted`, `PR welcome`, `UI`
+- Labels: `good first issue`, `help wanted`, `ux`
 - Goal: Improve the footer/local-only indicator.
 - Files to edit: `popup/popup.html`, `popup/popup.css`
 - Commands to run: `node --check popup/popup.js`
@@ -130,7 +148,7 @@ These issue ideas are designed to become small, focused pull requests. Copy any 
 ### 14. Improve category chip readability
 
 - Difficulty: Easy
-- Labels: `good first issue`, `help wanted`, `PR welcome`, `UI`
+- Labels: `good first issue`, `help wanted`, `ux`
 - Goal: Make category chips easier to scan.
 - Files to edit: `popup/popup.css`
 - Commands to run: None required
@@ -138,10 +156,19 @@ These issue ideas are designed to become small, focused pull requests. Copy any 
 
 ## Test/CI Improvement Issues
 
-### 15. Expand category coverage reporting
+### 15. Add a generated-file sync checker script
 
 - Difficulty: Medium
-- Labels: `help wanted`, `PR welcome`, `tests`
+- Labels: `help wanted`, `testing`
+- Goal: Add a script that fails if generated rules/config differ after generation.
+- Files to edit: `scripts/`, `package.json`, `.github/workflows/ci.yml`
+- Commands to run: `npm run generate:rules`, `npm run test:evidence`
+- Acceptance criteria: CI catches out-of-sync generated files.
+
+### 16. Expand category coverage reporting
+
+- Difficulty: Medium
+- Labels: `help wanted`, `testing`
 - Goal: Make `scripts/evaluate-test-set.mjs` report more fixture detail.
 - Files to edit: `scripts/evaluate-test-set.mjs`
 - Commands to run: `npm run test:evidence`
@@ -149,28 +176,28 @@ These issue ideas are designed to become small, focused pull requests. Copy any 
 
 ## Research Issues
 
-### 16. Research low-breakage tracker candidates
+### 17. Research low-breakage tracker candidates
 
 - Difficulty: Medium
-- Labels: `help wanted`, `PR welcome`, `research`, `safe expansion`
+- Labels: `help wanted`, `enhancement`
 - Goal: Identify five narrow tracker domains that are unlikely to break websites.
 - Files to edit: `docs/` or issue comments
 - Commands to run: None required
 - Acceptance criteria: Each candidate includes category, rationale, and breakage risk.
 
-### 17. Research broken-site patterns
+### 18. Research broken-site patterns
 
 - Difficulty: Medium
-- Labels: `help wanted`, `PR welcome`, `research`, `broken-site`
+- Labels: `help wanted`, `bug`
 - Goal: Document common reasons privacy rules break websites.
 - Files to edit: `docs/BROKEN_SITES.md`
 - Commands to run: None required
 - Acceptance criteria: Notes help contributors propose safer fixes.
 
-### 18. Document Decoy Mode compatibility examples
+### 19. Document Decoy Mode compatibility examples
 
 - Difficulty: Beginner
-- Labels: `good first issue`, `help wanted`, `PR welcome`, `documentation`, `MV3`
+- Labels: `good first issue`, `help wanted`, `documentation`, `browser-extension`
 - Goal: Add non-transactional examples of supported and unsupported request-body formats to `docs/DECOY_MODE.md`.
 - Files to edit: `docs/DECOY_MODE.md`
 - Commands to run: `npm run check`
