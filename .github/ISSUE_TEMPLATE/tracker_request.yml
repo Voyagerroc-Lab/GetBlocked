@@ -1,7 +1,7 @@
 name: Tracker request
 description: Suggest a tracker domain for the catalog. PRs are preferred.
 title: "[Tracker] "
-labels: ["tracker-domain", "PR welcome"]
+labels: ["enhancement"]
 body:
   - type: markdown
     attributes:
